@@ -1,4 +1,7 @@
-$("#comment_<%= @book.id %>").html("<%= j(render 'book_comments/comment', book: @book) %>");
+<!--コメント数も非同期-->
+$("#book_<%= @book.id %> .comments-count").html("コメント数: <%= @book.book_comments.count %>");
+
+$(".book-comments").html("<%= j(render 'book_comments/comment', book: @book) %>");
 
 <!--コメントリセット-->
-$(".form-control").val('');
+$("#book_comment_comment").val('');
