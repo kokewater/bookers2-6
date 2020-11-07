@@ -1,0 +1,4 @@
+$("#comment_<%= @book.id %>").html("<%= j(render 'book_comments/comment', book: @book) %>");
+
+<!--コメントリセット-->
+$(".form-control").val('');
